@@ -1,14 +1,30 @@
 // components.js
 
 // Toggle mobile menu with animation
+// Toggle mobile menu with animation
 function setupMenuToggle() {
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
-  const nav = document.getElementById("nav")
+  const nav = document.getElementById("nav");
+
+  let menuOpen = false;
 
   menuToggle.addEventListener('click', () => {
-    const isOpen = !menu.classList.contains('hidden');
+    const isOpen = menuOpen;
+    menuOpen = !menuOpen;
 
+    // Animate toggle icon rotation
+    anime({
+      targets: menuToggle,
+      rotate: menuOpen ? 90 : 0,
+      duration: 400,
+      easing: 'easeInOutSine',
+      complete: () => {
+        menuToggle.textContent = menuOpen ? "✖" : "☰";
+      }
+    });
+
+    // Animate menu open/close
     anime({
       targets: '#menu',
       opacity: isOpen ? [1, 0] : [0, 1],
@@ -18,23 +34,24 @@ function setupMenuToggle() {
       begin: () => {
         if (!isOpen) {
           menu.classList.remove('hidden');
-          menu.classList.add("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]")
-          menu.classList.add("shadow-[0_10px_16px_rgba(112,228,170,0.4)]")
-          menu.classList.add("dark:bg-black")
-          nav.classList.remove("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]")
+          menu.classList.add("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          menu.classList.add("shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          menu.classList.add("dark:bg-black");
+          nav.classList.remove("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
         }
       },
       complete: () => {
         if (isOpen) {
           menu.classList.add('hidden');
-          nav.classList.add("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]")
-          menu.classList.remove("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]")
-          menu.classList.remove("shadow-[0_10px_16px_rgba(112,228,170,0.4)]")
+          nav.classList.add("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          menu.classList.remove("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          menu.classList.remove("shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
         }
       }
     });
   });
 }
+
 
 // Theme toggle with anime.js and localStorage
 function setupThemeToggle() {

@@ -1,16 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
+// main.js
 
-  menuToggle.addEventListener("click", () => {
-    // Toggle hidden class on menu
-    menu.classList.toggle("hidden");
+fetch('./components/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
 
-    // Change icon/text based on menu visibility
-    if (menu.classList.contains("hidden")) {
-      menuToggle.textContent = "☰"; // Menu closed
-    } else {
-      menuToggle.textContent = "✖"; // Menu open
-    }
+    // Setup animations and theme after navbar is loaded
+    setupMenuToggle();
+    setupThemeToggle();
+    animateNavbar();
   });
-});

@@ -10,3 +10,13 @@ fetch('./components/navbar.html')
     setupThemeToggle();
     animateNavbar();
   });
+
+
+  fetch('./components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+
+    // Setup animations and theme after navbar is loaded
+ 
+  });

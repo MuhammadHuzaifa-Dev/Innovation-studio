@@ -3,13 +3,13 @@
 // Toggle mobile menu with animation
 // Toggle mobile menu with animation
 function setupMenuToggle() {
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
   const nav = document.getElementById("nav");
 
   let menuOpen = false;
 
-  menuToggle.addEventListener('click', () => {
+  menuToggle.addEventListener("click", () => {
     const isOpen = menuOpen;
     menuOpen = !menuOpen;
 
@@ -18,40 +18,41 @@ function setupMenuToggle() {
       targets: menuToggle,
       rotate: menuOpen ? 90 : 0,
       duration: 400,
-      easing: 'easeInOutSine',
+      easing: "easeInOutSine",
       complete: () => {
         menuToggle.textContent = menuOpen ? "✖" : "☰";
-      }
+      },
     });
 
     // Animate menu open/close
     anime({
-      targets: '#menu',
+      targets: "#menu",
       opacity: isOpen ? [1, 0] : [0, 1],
       translateY: isOpen ? [-10, -20] : [-20, 0],
       duration: 300,
-      easing: 'easeInOutQuad',
+      easing: "easeInOutQuad",
       begin: () => {
         if (!isOpen) {
-          menu.classList.remove('hidden');
+          menu.classList.remove("hidden");
           menu.classList.add("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
           menu.classList.add("shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
-          menu.classList.add("dark:bg-black");
-          nav.classList.remove("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          menu.classList.add("dark:bg-[#04060b]");
+          nav.classList.remove("shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
         }
       },
       complete: () => {
         if (isOpen) {
-          menu.classList.add('hidden');
-          nav.classList.add("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
-          menu.classList.remove("dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          menu.classList.add("hidden");
+          menu.classList.remove(
+            "dark:shadow-[0_10px_16px_rgba(112,228,170,0.4)]"
+          );
           menu.classList.remove("shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
+          nav.classList.add("shadow-[0_10px_16px_rgba(112,228,170,0.4)]");
         }
-      }
+      },
     });
   });
 }
-
 
 // Theme toggle with anime.js and localStorage
 function setupThemeToggle() {
@@ -93,10 +94,10 @@ function setupThemeToggle() {
 // Animate navbar on load
 function animateNavbar() {
   anime({
-    targets: '#navbar nav',
+    targets: "#navbar nav",
     opacity: [0, 1],
     translateY: [-20, 0],
     duration: 500,
-    easing: 'easeOutQuad',
+    easing: "easeOutQuad",
   });
 }

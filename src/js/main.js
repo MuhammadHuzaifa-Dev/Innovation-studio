@@ -1,5 +1,5 @@
 // main.js
-
+// navbar
 fetch('./components/navbar.html')
   .then(res => res.text())
   .then(data => {
@@ -11,12 +11,16 @@ fetch('./components/navbar.html')
     animateNavbar();
   });
 
-
-  fetch('./components/footer.html')
+// footer
+ fetch('./components/footer.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('footer').innerHTML = data;
+  });
 
-    // Setup animations and theme after navbar is loaded
- 
+  // hero-section
+   fetch('./components/hero.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('hero-section').innerHTML = data;
   });

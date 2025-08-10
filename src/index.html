@@ -1,50 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(20px)' },
-              '50%': { transform: 'translateY(-20px)' },
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(20px)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+            animation: {
+              float: "float 3s ease-in-out infinite",
+            },
           },
-          animation: {
-            float: 'float 3s ease-in-out infinite',
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <title>HOME</title>
-</head>
-<body class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-200">
-  <div id="navbar"></div>
-  
-  <div id="hero-section" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000"></div>
+        },
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>HOME</title>
+  </head>
+  <body
+    class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-200 overflow-x-hidden"
+  >
+    <div id="navbar"></div>
 
-  <div id="footer" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"></div>
-  
-  <script src="./js/components.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      offset: 120,
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
-  </script>
-</body>
+    <div
+      id="hero-section"
+      class="border border-gray-200 dark:border-gray-800"
+      data-aos="fade-right"
+      data-aos-delay="100"
+      data-aos-duration="800"
+    ></div>
+    <section
+      class="flex flex-col items-center md:py-20 border border-gray-200 dark:border-gray-800"
+      data-aos="fade-left"
+      data-aos-delay="100"
+      data-aos-duration="800"
+    >
+      <h1 class="text-3xl sm:text-5xl font-bold pt-5 mt-0 sm:py-3">
+        Our
+        <span class="text-[#70E4AA] font-extrabold">Services</span>
+      </h1>
+      <div
+        id="home-services"
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5 sm:mt-10"
+      >
+        
+      </div>
+      <button
+      class="text-white mb-5 sm:mt-5 sm:mb-0 font-semibold px-16 py-3 text-lg rounded-2xl  transform transition hover:scale-105 bg-[linear-gradient(90deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
+      aria-label="More Services"
+    >
+      <a href="services.html">More Services</a>
+    </button>
+    </section>
+     <section
+      class="flex flex-col items-center md:py-20 border border-gray-200 dark:border-gray-800"
+      data-aos="fade-left"
+      data-aos-delay="100"
+      data-aos-duration="800"
+    >
+      <h1 class="text-3xl sm:text-5xl font-bold pt-5 mt-0 sm:py-3">
+        Our
+        <span class="text-[#70E4AA] font-extrabold">Projects</span>
+      </h1>
+      <div
+        id="home-projects"
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5 sm:mt-10"
+      >
+        
+      </div>
+      <button
+      class="text-white mb-5 sm:mt-5 sm:mb-0 font-semibold px-16 py-3 text-lg rounded-2xl  transform transition hover:scale-105 bg-[linear-gradient(50deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
+      aria-label="More Projects"
+    >
+      <a href="projects.html">More Projects</a>
+    </button>
+    </section>
+
+    <div
+      id="footer"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="800"
+    ></div>
+    <script src="./js/data.js"></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+  </body>
 </html>

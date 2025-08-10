@@ -101,3 +101,44 @@ function animateNavbar() {
     easing: "easeOutQuad",
   });
 }
+
+//Services and Projects card component loop
+function renderCards(type, data) { 
+  let container;
+  let itemsToShow;
+
+  if (document.getElementById(`home-${type}`)) {
+    container = document.getElementById(`home-${type}`);
+    itemsToShow = 3;
+  } 
+  else if (document.getElementById(`${type}-container`)) {
+    container = document.getElementById(`${type}-container`);
+    itemsToShow = data.length;
+  }
+
+  if (!container) return;
+
+  data.slice(0, itemsToShow).forEach(item => {
+    const card = document.createElement("div");
+    card.innerHTML = `
+      <div class="bg-[#245053] dark:bg-[#07161f] shadow-lg rounded-lg overflow-hidden sm:min-w-[350px] sm:h-[400px]  max-w-[300px] transform transition sm:hover:scale-105">
+        <img
+          src="${item.image}"
+          alt="${item.title}"
+          class="w-full sm:h-72 h-56 object-fill rounded-t-lg"
+        />
+        <div class="p-4">
+          <h3 class="text-lg text-white font-bold mt-2">${item.title}</h3>
+          <p class="text-gray-300">${item.description}</p>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Run on page load
+document.addEventListener("DOMContentLoaded", () => {
+  renderCards("services", servicesData);
+  renderCards("projects", projectsData);
+});

@@ -78,14 +78,23 @@ Innovation-studio/
 
 ## Screenshots
 - Home Page
+
 ![Home Page Screenshot](/src/assets/screenShots/home.png)
+
 - About Us
+
 ![About Us Screenshot](./src/assets/screenShots/about.png)
+
 - Services
+
 ![Services Screenshot](./src/assets/screenShots/services.png)
+
 - Projects
+
 ![Projects Screenshot](./src/assets/screenShots/projects.png)
+
 - Contact Page
+
 ![Contact Page Screenshot](./src/assets/screenShots/contact.png)
 
 ## Contributing

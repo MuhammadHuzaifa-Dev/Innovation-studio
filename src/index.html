@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script>
@@ -26,10 +28,10 @@
       };
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <title>HOME</title>
+    <title>Innovation Studio | Creative Digital Solutions & Ideas</title>
   </head>
   <body
-    class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-200 overflow-x-hidden"
+    class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-200 sm:overflow-y-hidden sm:overflow-x-hidden"
   >
     <div id="navbar"></div>
 
@@ -40,6 +42,45 @@
       data-aos-delay="100"
       data-aos-duration="800"
     ></div>
+
+    <!-- ABOUT SECTION -->
+    <section
+      id="about-section"
+      class="w-full flex flex-col md:flex-row items-center gap-10 px-6 py-16 md:py-20 border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#04060b] transition-colors duration-300"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="800"
+    >
+      <!-- Left Side: Image -->
+      <div class="flex-1 flex justify-center">
+        <img
+          src="./assets/aboutIMG/about.png"
+          alt="About Us"
+          class="rounded-2xl shadow-lg w-full max-w-sm object-cover"
+        />
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-3xl sm:text-5xl font-bold mb-4">
+          About <span class="text-[#70E4AA]">Us</span>
+        </h2>
+        <p
+          class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
+        >
+          <span class="text-[#70E4AA] font-bold">Innovation Studio</span> is a
+          forward-thinking tech company dedicated to delivering cutting-edge web
+          applications, mobile apps, and digital tools. We believe in building
+          products that are not just functional but also meaningful...
+        </p>
+        <button
+          class="text-white font-semibold px-10 py-3 text-lg rounded-2xl transform transition hover:scale-105 bg-[linear-gradient(90deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
+        >
+          <a href="about.html">Learn More</a>
+        </button>
+      </div>
+    </section>
+
     <section
       class="flex flex-col items-center md:py-20 border border-gray-200 dark:border-gray-800"
       data-aos="fade-left"
@@ -53,17 +94,16 @@
       <div
         id="home-services"
         class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5 sm:mt-10"
-      >
-        
-      </div>
+      ></div>
       <button
-      class="text-white mb-5 sm:mt-5 sm:mb-0 font-semibold px-16 py-3 text-lg rounded-2xl  transform transition hover:scale-105 bg-[linear-gradient(90deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
-      aria-label="More Services"
-    >
-      <a href="services.html">More Services</a>
-    </button>
+        class="text-white mb-5 sm:mt-5 sm:mb-0 font-semibold px-16 py-3 text-lg rounded-2xl transform transition hover:scale-105 bg-[linear-gradient(90deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
+        aria-label="More Services"
+      >
+        <a href="services.html">More Services</a>
+      </button>
     </section>
-     <section
+
+    <section
       class="flex flex-col items-center md:py-20 border border-gray-200 dark:border-gray-800"
       data-aos="fade-left"
       data-aos-delay="100"
@@ -76,15 +116,23 @@
       <div
         id="home-projects"
         class="grid grid-cols-1 md:grid-cols-3 gap-6 m-5 sm:mt-10"
-      >
-        
-      </div>
+      ></div>
       <button
-      class="text-white mb-5 sm:mt-5 sm:mb-0 font-semibold px-16 py-3 text-lg rounded-2xl  transform transition hover:scale-105 bg-[linear-gradient(50deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
-      aria-label="More Projects"
-    >
-      <a href="projects.html">More Projects</a>
-    </button>
+        class="text-white mb-5 sm:mt-5 sm:mb-0 font-semibold px-16 py-3 text-lg rounded-2xl transform transition hover:scale-105 bg-[linear-gradient(50deg,#70E4AA_0%,#04060b_50%,#70E4AA_100%)] dark:bg-[linear-gradient(90deg,#04060b_0%,#70E4AA_80%,#04060b_100%)] bg-[length:200%_200%] animate-gradient"
+        aria-label="More Projects"
+      >
+        <a href="projects.html">More Projects</a>
+      </button>
+    </section>
+
+    <section class="py-12 text-center px-4">
+      <h2 class="text-3xl sm:text-5xl font-bold mb-7">
+        Contact <span class="text-[#70E4AA]">Us</span>
+      </h2>
+      <div
+        id="contact"
+        class="max-w-md mx-auto bg-[#245053] dark:bg-[#07161f] p-5 rounded-2xl shadow-lg"
+      ></div>
     </section>
 
     <div

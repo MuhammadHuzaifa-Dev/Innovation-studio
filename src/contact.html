@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    };
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <title>Contact</title>
-</head>
-<body class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-300">
-  <div id="navbar"></div>
-  <div id="footer"></div>
-<script src="./js/components.js"></script>
-<script src="./js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Contact Us | Innovation Studio – Let’s Build Together</title>
+  </head>
+  <body
+    class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-300"
+  >
+    <div id="navbar"></div>
+    <section
+      class="py-12 text-center px-4"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="800"
+    >
+      <h2 class="text-3xl sm:text-5xl font-bold mb-7">
+        Contact <span class="text-[#70E4AA]">Us</span>
+      </h2>
+      <div
+        id="contact"
+        class="max-w-md mx-auto bg-[#245053] dark:bg-[#07161f] p-5 rounded-2xl shadow-lg"
+      ></div>
+    </section>
+    <div id="footer"></div>
+    <script src="./js/data.js"></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+  </body>
 </html>

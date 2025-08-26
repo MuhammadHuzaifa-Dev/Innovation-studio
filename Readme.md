@@ -77,11 +77,11 @@ Innovation-studio/
 ```
 
 ## Screenshots
-- ![Home Page Screenshot](src/assets/screenshots/home.png)
-- ![About Us Screenshot](src/assets/screenshots/about.png)
-- ![Services Screenshot](src/assets/screenshots/services.png)
-- ![Projects Screenshot](src/assets/screenshots/projects.png)
-- ![Contact Page Screenshot](src/assets/screenshots/contact.png)
+- ![Home Page Screenshot](/src/assets/screenShots/home.png)
+- ![About Us Screenshot](./src/assets/screenShots/about.png)
+- ![Services Screenshot](./src/assets/screenShots/services.png)
+- ![Projects Screenshot](./src/assets/screenShots/projects.png)
+- ![Contact Page Screenshot](./src/assets/screenShots/contact.png)
 
 ## Contributing
 This project was developed as an internship task. For contributions or feedback, please contact the developer.

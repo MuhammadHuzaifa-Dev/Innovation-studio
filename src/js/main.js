@@ -24,3 +24,23 @@ fetch('./components/navbar.html')
   .then(data => {
     document.getElementById('hero-section').innerHTML = data;
   });
+  
+  function populateServiceSelect() {
+  const select = document.getElementById('serviceSelect');
+  if (!select) return; // Form not loaded yet
+  
+  servicesData.forEach(service => {
+    const option = document.createElement('option');
+    option.value = service.title;
+    option.textContent = service.title;
+    select.appendChild(option);
+  });
+}
+  
+//contact
+    fetch('./components/contactform.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('contact').innerHTML = data;
+    populateServiceSelect();
+  });

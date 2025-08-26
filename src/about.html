@@ -1,22 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    };
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <title>About</title>
-</head>
-<body class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-300">
-  <div id="navbar"></div>
-  <div id="footer"></div>
-<script src="./js/components.js"></script>
-<script src="./js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>About Us | Innovation Studio – Creativity Meets Technology</title>
+  </head>
+  <body
+    class="bg-white dark:bg-[#04060b] text-black dark:text-white transition-colors duration-300"
+  >
+    <div id="navbar"></div>
+    <section
+      class="flex flex-col items-center justify-center text-center px-6 py-20 border-b border-gray-200 dark:border-gray-800"
+      data-aos="fade-up"
+    >
+      <h1 class="text-4xl sm:text-6xl font-bold mb-4">
+        About <span class="text-[#70E4AA]">Innovation Studio</span>
+      </h1>
+      <p class="max-w-3xl text-gray-700 dark:text-gray-300 text-lg">
+        We are driven by the belief that technology can transform lives. Our
+        team blends creativity, strategy, and innovation to craft digital
+        solutions that make a difference.
+      </p>
+    </section>
+
+    <!-- About Main Content -->
+    <section
+      class="w-full flex flex-col md:flex-row items-center gap-10 px-6 py-16 md:py-20 border-b border-gray-200 dark:border-gray-800"
+      data-aos="fade-up"
+    >
+      <!-- Image -->
+      <div class="flex-1 flex justify-center">
+        <img
+          src="./assets/aboutIMG/about.png"
+          alt="About Us"
+          class="rounded-2xl shadow-lg w-full max-w-md object-cover"
+        />
+      </div>
+
+      <!-- Text -->
+      <div class="flex-1">
+        <h2 class="text-3xl sm:text-5xl font-bold mb-4">Who We Are</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+          <span class="text-[#70E4AA] font-bold">Innovation Studio</span> is a
+          forward-thinking tech company dedicated to delivering cutting-edge web
+          applications, mobile apps, and digital tools. We believe in building
+          products that are not just functional but also meaningful.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Our mission is simple: empower individuals and businesses to achieve
+          their goals through technology. From concept to launch, every step we
+          take is guided by creativity, precision, and innovation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section
+      class="px-6 py-16 md:py-20 border-b border-gray-200 dark:border-gray-800"
+      data-aos="fade-up"
+    >
+      <div class="grid md:grid-cols-2 gap-10">
+        <div
+          class="bg-[#245053] dark:bg-[#07161f] p-8 rounded-2xl shadow-lg transform transition sm:hover:scale-105"
+        >
+          <h3 class="text-2xl font-bold mb-3 text-[#70E4AA]">Our Vision</h3>
+          <p class="text-gray-100 dark:text-gray-300 leading-relaxed">
+            To be a global leader in digital innovation, inspiring change and
+            driving transformation in industries across the world.
+          </p>
+        </div>
+        <div
+          class="bg-[#245053] dark:bg-[#07161f] p-8 rounded-2xl shadow-lg transform transition sm:hover:scale-105"
+        >
+          <h3 class="text-2xl font-bold mb-3 text-[#70E4AA]">Our Mission</h3>
+          <p class="text-gray-100 dark:text-gray-300 leading-relaxed">
+            To design and develop world-class digital solutions that empower
+            communities, streamline business processes, and create lasting
+            impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="px-6 py-16 md:py-20" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-5xl font-bold text-center mb-10">
+        Meet Our <span class="text-[#70E4AA]">Team</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Muhammad Huzaifa -->
+        <div
+          class="bg-[#245053] dark:bg-[#07161f] p-6 rounded-2xl shadow-lg text-center transform transition sm:hover:scale-105"
+        >
+          <img
+            src="./assets/aboutIMG/huzaifa.dev.jpg"
+            alt=""
+            class="w-32 h-32 mx-auto rounded-full"
+          />
+          <h3 class="mt-4 text-xl text-white font-bold">Muhammad Huzaifa</h3>
+          <p class="text-[#70E4AA] font-semibold">Aspiring Lead Developer</p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://www.linkedin.com/in/muhammad-huzaifa-a31907333/"
+              target="_blank"
+              class="text-white hover:text-[#70E4AA]"
+            >
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="https://github.com/MuhammadHuzaifa-dev/"
+              target="_blank"
+              class="text-white hover:text-[#70E4AA]"
+            >
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Rumesa Khalid -->
+        <div
+          class="bg-[#245053] dark:bg-[#07161f] p-6 rounded-2xl shadow-lg text-center transform transition sm:hover:scale-105"
+        >
+          <img
+            src="./assets/aboutIMG/rumesa.jpeg"
+            alt=""
+            class="w-32 h-32 mx-auto rounded-full"
+          />
+          <h3 class="mt-4 text-xl text-white font-bold">Rumesa Khalid</h3>
+          <p class="text-[#70E4AA] font-semibold">Founder & CEO</p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://www.linkedin.com/in/rumesa-khalid-ba1398258/"
+              target="_blank"
+              class="text-white hover:text-[#70E4AA]"
+            >
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="https://www.behance.net/rumesakhalid"
+              target="_blank"
+              class="text-white hover:text-[#70E4AA]"
+            >
+              <i data-lucide="globe" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mark Lee -->
+        <div
+          class="bg-[#245053] dark:bg-[#07161f] p-6 rounded-2xl shadow-lg text-center transform transition sm:hover:scale-105"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg"
+            alt=""
+            class="w-32 h-32 mx-auto rounded-full"
+          />
+          <h3 class="mt-4 text-xl text-white font-bold">Mark Lee</h3>
+          <p class="text-[#70E4AA] font-semibold">UI/UX Designer</p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="text-white hover:text-[#70E4AA]"
+            >
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a
+              href="https://yourportfolio.com"
+              target="_blank"
+              class="text-white hover:text-[#70E4AA]"
+            >
+              <i data-lucide="globe" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./js/components.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+  </body>
 </html>
